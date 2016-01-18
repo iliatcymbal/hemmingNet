@@ -1,0 +1,53 @@
+.holder{
+  overflow: hidden;
+  margin: 0 0 15px;
+}
+.canvas{
+  float: left;
+}
+.canvas div{
+  float: left;
+  width: 15px;
+  height: 15px;
+  background: #eee;
+  margin: 0 3px 3px 0;
+}
+.canvas-box{
+  list-style:none;
+  margin: 0 0 10px;
+  padding: 0;
+  counter-reset: index -1;
+}
+.canvas-box li{
+  float:left;
+  padding: 0 5px 0 0;
+}
+.canvas-box li:before {
+	content: counter(index);
+	counter-increment: index;
+	float: left;
+	margin: 0 5px 0 0;
+	font-weight: bold;
+}
+.canvas .first{
+  clear:left;
+}
+.canvas .active{background: #aaa;}
+.log{
+  line-height: 18px;
+  letter-spacing: 7px;
+  float: left;
+  margin: 0 10px 0 5px;
+}
+canvas.canvas{
+  border: 1px solid #000;
+  background: #eee;
+  cursor: crosshair;
+}
+#canvasSwitcher:checked ~ .holder  div.canvas,
+#canvasSwitcher ~ .holder canvas,
+#button-result{
+  display:none;
+}
+
+#canvasSwitcher:checked ~ .holder canvas{display:block;}
