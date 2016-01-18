@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="matrix.js"></script>
+    <script src="neocortex.js"></script>
+    <script src="canvas.js"></script>
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Hello Hemming's network!</h1>
+    <input type="checkbox" id="canvasSwitcher">
+    <label for="canvasSwitcher">Switch to html5 canvas</label>
+    <br>
+    <br>
+    <ol class="holder canvas-box">
+      <li class="box">
+        <div class="canvas c1"></div>
+        <canvas class="canvas c11" width="50" height="50"></canvas>
+        <span class="log l1"></span>
+      </li>
+      <li class="box">
+        <div class="canvas c2"></div>
+        <canvas class="canvas c21" width="50" height="50"></canvas>
+        <span class="log l2"></span>
+      </li>
+      <li class="box">
+        <div class="canvas c3"></div>
+        <canvas class="canvas c31" width="50" height="50"></canvas>
+        <span class="log l3"></span>
+      </li>
+    </ol>
+    <button id="button-train">Train net</button>
+    <div class="holder canvas-incoming">
+      <h2>Input</h2>
+      <div class="canvas c4"></div>
+      <canvas class="canvas input" width="50" height="50"></canvas>
+      <button id="button-result">Get char</button>
+    </div>
+    <div class="holder">
+      <h2>Output</h2>
+      <strong id="result">Undefined</strong>
+    </div>
+  </body>
+
+</html>
